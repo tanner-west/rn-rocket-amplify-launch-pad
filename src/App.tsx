@@ -40,7 +40,7 @@ export enum Modals {
   PROFILE,
 }
 
-// Amplify.configure({...awsConfig});
+Amplify.configure({...awsConfig});
 
 const Main = () => {
   const [visibleModal, setVisibleModal] = useState<Modals | undefined | null>();
