@@ -2,7 +2,8 @@ import React, {useEffect, useState} from 'react';
 import awsConfig from './aws-exports';
 import * as eva from '@eva-design/eva';
 import {SafeAreaView, ScrollView, View, TouchableOpacity} from 'react-native';
-import {Amplify, Auth, API, Hub} from 'aws-amplify';
+import {Amplify, Auth, API, Hub,} from 'aws-amplify';
+import { GRAPHQL_AUTH_MODE } from '@aws-amplify/auth';
 import {
   ApplicationProvider,
   Text,
@@ -60,7 +61,6 @@ const Main = () => {
       // TODO: Implement listPosts endpoint
       // const postData = (await API.graphql({
       //   query: queries.listPosts,
-      //   authMode: GRAPHQL_AUTH_MODE.API_KEY,
       // })) as any;
       // setPosts(
       //   postData.data.listPosts.items.sort((a: any, b: any) =>
